@@ -34,12 +34,6 @@ RUN cp /home/gempak/GEMPAK7/os/linux64/bin/dc* $HOME/bin/
 RUN chown ldm:ldm $HOME/bin/dc*
 
 #
-# Full ldmd.conf
-#
-
-COPY ldmd.conf $HOME/etc/
-
-#
 # GEMPAK version replacement runldm.sh
 #
 COPY runldm.sh $HOME/bin/
