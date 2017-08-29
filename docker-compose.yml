@@ -1,0 +1,13 @@
+###
+# GEMPAK
+###
+gempak:
+  # restart: always
+  image: unidata/gempak:latest
+  container_name: gempak
+  ports:
+    - "388:388"
+  ulimits:
+    nofile:
+      soft: 1024
+      hard: 1024

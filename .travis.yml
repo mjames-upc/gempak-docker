@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build --no-cache -t unidata/gempak:latest .
+  - mkdir -p data/gempak
+  - mkdir logs queues 
+  - docker run --name gempak -d -v `pwd`/etc:/home/ldm/etc -v `pwd`/data:/home/ldm/var/data -v `pwd`/queues:/home/ldm/var/queues -v `pwd`/logs:/home/ldm/var/logs -p 388:388 unidata/gempak:latest
+  
+script:
+  - docker exec gempak ldmadmin config
