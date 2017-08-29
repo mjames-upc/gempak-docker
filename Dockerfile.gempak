@@ -14,7 +14,7 @@ RUN yum install openmotif libX11 libXt libXext libXp libXft libXtst xorg-x11-xbi
 #
 # GEMPAK binary
 #
-
+RUN adduser gempak
 RUN rpm -ivh http://www.unidata.ucar.edu/downloads/gempak/latest/gempak-7.4.0-1.el7.centos.x86_64.rpm
 
 #
