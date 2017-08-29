@@ -27,11 +27,7 @@ RUN gempakConfig.sh
 # Copy GEMPAK decoders to ldm/bin
 #
 
-USER root
-RUN chown ldm:ldm /home/gempak/GEMPAK7
-RUN cd /home/gempak/GEMPAK7/ldm/
 RUN cp /home/gempak/GEMPAK7/os/linux64/bin/dc* $HOME/bin/
-RUN chown ldm:ldm $HOME/bin/dc*
 
 #
 # GEMPAK version replacement runldm.sh
