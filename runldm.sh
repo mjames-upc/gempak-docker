@@ -21,12 +21,3 @@ ldmadmin start
 
 # never exit
 while true; do sleep 10000; done
-
-ldmadmin watch
-
-sleep 10
-
-echo ""
-echo ""
-echo "Hit [RETURN] to exit"
-read
